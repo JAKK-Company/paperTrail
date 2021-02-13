@@ -1,3 +1,7 @@
+
+const { User, Category, Item } = require('./models');
+
+
 const express = require('express');
 const path = require('path');
 
