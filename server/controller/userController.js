@@ -1,5 +1,5 @@
 // const { models } = require('mongoose');
-const { User, Category, Item } = require('./models');
+const { User, Category, Item } = require('../models/models');
 
 const userController = {};
 

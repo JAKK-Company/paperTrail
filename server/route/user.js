@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const userConroller = require('../controller/userContoller');
+const userController = require('../controller/userController');
 
 // GET 
 router.get('/',
@@ -15,14 +15,14 @@ router.get('/',
 
 
 // POST 
-router.post('/',
-  userConroller.validateRequest,
-  userConroller.createUser,
-  (req, res) => {
-    return res.status(200).json({
-      newUser: res.locals.newUser
-    });
-  }
-);
+// router.post('/',
+//   userController.validateRequest,
+//   userController.createUser,
+//   (req, res) => {
+//     return res.status(200).json({
+//       newUser: res.locals.newUser
+//     });
+//   }
+// );
 
 module.exports = router;
