@@ -16,8 +16,7 @@ mongoose.connect(MONGO_URI, {
 
 
 const userSchema = new Schema ({
-  firstName: {type: String, required: true},
-  lastName: {type: String, required: true},
+  fullName: {type: String, required: true},
   userName: {type: String, required: true},
   password: {type: String, required: true},
   email: {type: String, required: true},
@@ -36,7 +35,7 @@ const categorySchema = new Schema ({
   total: Number,
   type: String,
   items: [{
-    title: String, 
+    description: String, 
     id: {
       type: Schema.Types.ObjectId,
       ref: 'item'
