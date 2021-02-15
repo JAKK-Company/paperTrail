@@ -32,7 +32,7 @@ class App extends Component {
     const userRequest = JSON.stringify({email: inputEmail, password: inputPassword});
     // console.log(userRequest);
     // do something with response that allows/denies user to move on
-    fetch('/user', {
+    fetch('/user/login', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: userRequest
