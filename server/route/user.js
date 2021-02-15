@@ -2,8 +2,8 @@ const express = require('express');
 const router = express.Router();
 const userController = require('../controller/userController');
 
-// GET 
-router.get('/',
+// Login using POST request 
+router.post('/login',
   userController.validateRequest,
   userController.getUser,
   (req, res) => {
@@ -15,14 +15,14 @@ router.get('/',
 
 
 // POST 
-// router.post('/',
-//   userController.validateRequest,
-//   userController.createUser,
-//   (req, res) => {
-//     return res.status(200).json({
-//       newUser: res.locals.newUser
-//     });
-//   }
-// );
+router.post('/create',
+  userController.validateRequest,
+  userController.createUser,
+  (req, res) => {
+    return res.status(200).json({
+      newUser: res.locals.newUser
+    });
+  }
+);
 
 module.exports = router;
