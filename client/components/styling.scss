@@ -61,10 +61,11 @@ button {
   justify-items: center;
   margin: $margin;
   width: 100%;
+  &:hover {
+    background:hotpink;
+  }
 }
-// button a:hover {
-//   background-color: lightgreen;
-// }
+
 
 #log{
   background-color: green;
