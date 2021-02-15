@@ -35,7 +35,7 @@ userController.createUser = (req, res, next) => {
     res.locals.newUser = result;
     return next();
   })
-  .catch(error => next({
+  .catch(err => next({
     err: `Error creating new user in db: ${err}`
   }));}
 

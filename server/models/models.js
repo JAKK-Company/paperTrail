@@ -20,35 +20,57 @@ const userSchema = new Schema ({
   email: {type: String, required: true},
   categories:  [{
     type: String, 
-    id: {
-      type: Schema.Types.ObjectId,
-      ref: 'category'
-    }
-  }], 
+    total: Number,
+    items: [{
+      description: String,
+      id: {
+        type: Schema.Types.ObjectId,
+        ref: 'item'
+      }
+    }], 
+
+  }]
 })
+// Example add category request 
+
+// {
+//   type: 'shoes',
+//   total: 0,
+//   items: []
+// }
+
+// // example add item for user
+// {
+//   category; 'an existing category for the current user'
+//   cost: 10,
+//   description: 'nike shoes',
+//   imageImage: 'image in string format'
+// }
+
+
 
 const User = mongoose.model('user', userSchema);
 
-const categorySchema = new Schema ({
-  total: Number,
-  type: String,
-  items: [{
-    description: String, 
-    id: {
-      type: Schema.Types.ObjectId,
-      ref: 'item'
-    }
-  }]
-})
+// const categorySchema = new Schema ({
+//   total: Number,
+//   type: String,
+//   items: [{
+//     description: String, 
+//     id: {
+//       type: Schema.Types.ObjectId,
+//       ref: 'item'
+//     }
+//   }]
+// })
 
-const Category = mongoose.model('category', categorySchema);
+// const Category = mongoose.model('category', categorySchema);
 
 const itemSchema = new Schema ({
   cost: Number,
   description: String,
   receiptImage: {
     data: Buffer,
-    contentType: String
+    contentType: String,
   } 
 });
 
@@ -56,6 +78,6 @@ const Item = mongoose.model('item', itemSchema);
 
 module.exports = {
   User,
-  Category,
+  // Category,
   Item
 }
