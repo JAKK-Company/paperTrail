@@ -38,11 +38,15 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "bootstrap": "^5.0.0-beta2",
     "express": "^4.17.1",
+    "image-webpack-loader": "^7.0.1",
+    "media-query-react": "^1.0.4",
     "mongodb": "^3.6.4",
     "mongoose": "^5.11.16",
     "nodemon": "^2.0.7",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "react-responsive": "^8.2.0"
   }
 }
