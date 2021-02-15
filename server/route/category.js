@@ -1,13 +1,16 @@
 const express = require('express');
 const router = express.Router();
 const categoryController = require('../controller/categoryController');
+const userController = require('../controller/userController');
 
 // POST
 router.post('/create',
-  categoryController.addCategory,
+  categoryController.validateCategory,
+  userController.getUser,
+  categoryController.createCategory,
   (req, res) => {
     return res.status(200).json({
-      category: res.locals.category
+      user: res.locals.user
     });
   }
 );

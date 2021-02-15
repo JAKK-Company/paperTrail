@@ -7,7 +7,7 @@ const userController = {};
 
 
 // middleware function to verify username and password
-userController.validateRequest = (req, res, next) => {
+userController.validateUser = (req, res, next) => {
   if (!req.body.email || !req.body.password  || typeof req.body.email !== 'string' || typeof req.body.password !== 'string') {
     return next({
       err: 'Invalid request'

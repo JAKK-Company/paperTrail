@@ -19,7 +19,7 @@ const userSchema = new Schema ({
   password: {type: String, required: true},
   email: {type: String, required: true},
   categories:  [{
-    type: String, 
+    category: String, 
     total: Number,
     items: [{
       description: String,
@@ -41,7 +41,8 @@ const userSchema = new Schema ({
 
 // // example add item for user
 // {
-//   category; 'an existing category for the current user'
+//   category: 'an existing category for the current user'
+//   user: 'John Do'
 //   cost: 10,
 //   description: 'nike shoes',
 //   imageImage: 'image in string format'

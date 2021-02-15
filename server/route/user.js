@@ -4,7 +4,7 @@ const userController = require('../controller/userController');
 
 // Login using POST request 
 router.post('/login',
-  userController.validateRequest,
+  userController.validateUser,
   userController.getUser,
   (req, res) => {
     return res.status(200).json({
@@ -16,7 +16,7 @@ router.post('/login',
 
 // POST 
 router.post('/create',
-  userController.validateRequest,
+  userController.validateUser,
   userController.createUser,
   (req, res) => {
     return res.status(200).json({
