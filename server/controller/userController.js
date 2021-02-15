@@ -42,6 +42,7 @@ userController.createUser = (req, res, next) => {
 
 
 //TODO: What to send back if user doesnt exist to authenticate
+// middelware function that looks for existing user and returns object with user information or null if not found.
 userController.getUser = (req, res, next) => {
   const queryObj = {
     email: req.body.email,
