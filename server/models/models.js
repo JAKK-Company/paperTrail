@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 
-const MONGO_URI = 'mongodb+srv://papertTrail-App:mypass123@cluster0.is58e.mongodb.net/paperTrail?authSource=admin&replicaSet=atlas-10x0d9-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true';
+const MONGO_URI = 'mongodb+srv://junebug:skate213@iteration.2rdbp.mongodb.net/Iteration?retryWrites=true&w=majority';
 
 mongoose.connect(MONGO_URI, {
   // options for the connect method to parse the URI
