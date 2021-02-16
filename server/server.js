@@ -21,7 +21,7 @@ app.get('/',
 
 app.get('/logo.png',
   (req, res) => {
-    res.status(200).sendFile(path.resolve(__dirname, '../client/money-bag.png'));
+    res.status(200).sendFile(path.resolve(__dirname, '../client/logo.png'));
   });
 
 // user Router 
