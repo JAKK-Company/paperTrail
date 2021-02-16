@@ -17,7 +17,7 @@ class CreateAccount extends Component {
         <div id='all'>
           <div id='top'>
             <h1>Create Account</h1>
-            <img id='logo' src="https://www.vhv.rs/dpng/d/555-5558711_money-bag-dollar-transparent-background-dollar-icon-hd.png"></img>
+            {/* <img id='logo' src="logo.png"></img> */}
             </div>
           <form onSubmit={this.props.handleCreation}> 
               <input type="text" className="form-control" id="inputFullName" aria-describedby="fullNameHelp" placeholder="Full Name"/>
