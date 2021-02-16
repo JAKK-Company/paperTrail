@@ -19,6 +19,11 @@ app.get('/',
     res.status(200).sendFile(path.resolve(__dirname, '../client/index.html'));
   });
 
+app.get('/logo.png',
+  (req, res) => {
+    res.status(200).sendFile(path.resolve(__dirname, '../client/money-bag.png'));
+  });
+
 // user Router 
 app.use('/user', userRouter);
 
