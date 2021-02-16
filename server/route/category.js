@@ -1,29 +1,18 @@
 const express = require('express');
 const router = express.Router();
+const categoryController = require('../controller/categoryController');
 const userController = require('../controller/userController');
 
-// Login using POST request 
-router.post('/login',
-  userController.validateUser,
+// POST
+router.post('/create',
+  categoryController.validateCategory,
   userController.getUser,
+  categoryController.createCategory,
   (req, res) => {
     return res.status(200).json({
       user: res.locals.user
     });
   }
 );
-
-
-// POST 
-router.post('/create',
-  userController.validateUser,
-  userController.createUser,
-  (req, res) => {
-    return res.status(200).json({
-      newUser: res.locals.newUser
-    });
-  }
-);
-
 
 module.exports = router;
