@@ -69,4 +69,32 @@ categoryController.createCategory = (req, res, next) => {
 
 
 
+categoryController.deleteCategory = (req, res, next) => {
+
+  const user = res.locals.user;
+
+  const updatedCategories = []
+
+  user.categories.forEach(ele => {
+    if( ele.category !== req.body.category) updatedCategories.push(ele);
+  })
+  console.log('UpdatedCategories >>> ', updatedCategories);
+
+  const currentUserFilter = {
+    email: res.locals.user.email 
+  };
+
+  User.findOneAndUpdate(currentUserFilter, {categories: updatedCategories }, {new: true}).exec()
+  .then(updatedUserDoc => {
+    console.log('Deleted requested category => ', updatedUserDoc);
+    res.locals.user = updatedUserDoc;
+    return next();
+  })
+  .catch(err => next({
+    err: `Err deleting requested category in db: ${err}` 
+  }));
+}
+
+
+
 module.exports = categoryController;

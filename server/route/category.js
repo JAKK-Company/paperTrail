@@ -15,4 +15,17 @@ router.post('/create',
   }
 );
 
+
+// DELETE
+router.delete('/',
+  categoryController.validateCategory,
+  userController.getUser,
+  categoryController.deleteCategory,
+  (req, res) => {
+    return res.status(200).json({
+      user: res.locals.user
+    })
+  }
+)
+
 module.exports = router;
