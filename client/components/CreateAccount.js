@@ -17,9 +17,7 @@ class CreateAccount extends Component {
     this.state={
       email: '',
       password: ''
-      //  isFetching:- false,
-      // users: []
-    }
+    };
     this.funcLogin = this.funcLogin.bind(this);
     this.createNew = this.createNew.bind(this);
   }

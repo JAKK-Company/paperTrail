@@ -5,10 +5,11 @@ import {
   Switch,
   Route,
   Link
-} from "react-router-dom";
+} from 'react-router-dom';
 
-import Login from "./Login";
-import CreateAccount from "./CreateAccount";
+import Login from './Login';
+import CreateAccount from './CreateAccount';
+import Dashboard from './Dashboard';
 
 function App() {
   return (
@@ -19,13 +20,17 @@ function App() {
         <Switch>
           <Route 
             exact path="/" 
-            render={() => 
-              <Login data={"test"}/>
-              }
+            render= {() => 
+              <Login data={'test'}/>
+            }
           />
           <Route 
             exact path="/Users/createAccount"  
             component = {CreateAccount} 
+          />
+          <Route 
+            exact path= "/Dashboard"
+            component= {Dashboard}
           />
         </Switch>
       </div>
