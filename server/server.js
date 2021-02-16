@@ -6,6 +6,8 @@ const PORT = 3000;
 
 
 const userRouter = require('./route/user');
+const categoryRouter = require('./route/category');
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -20,6 +22,7 @@ app.get('/',
 // user Router 
 app.use('/user', userRouter);
 
+app.use('/category', categoryRouter);
 
 
 app.get('/build/bundle.js',
