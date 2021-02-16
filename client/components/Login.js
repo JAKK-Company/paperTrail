@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 // import { useMediaQuery } from 'react-responsive';
 import "./styling.scss";
-// import logo from './logo.png';
 import { Link, Redirect } from "react-router-dom";
 
 class Login extends Component {
@@ -15,7 +14,9 @@ class Login extends Component {
       <div id='all'>
         <div id='top'>
           <h1>Welcome to PaperTrail</h1>
-          <img id='logo' src="https://previews.123rf.com/images/eljanstock/eljanstock1811/eljanstock181116529/112444111-money-vector-icon-isolated-on-transparent-background-money-transparency-logo-concept.jpg"></img>
+          {/* <img id='logo' src="https://previews.123rf.com/images/eljanstock/eljanstock1811/eljanstock181116529/112444111-money-vector-icon-isolated-on-transparent-background-money-transparency-logo-concept.jpg"></img> */}
+          <img id='logo' src="logo.png"/>
+        
         </div>
         <form onSubmit={this.props.handleLogin}>
           <input type="email" className="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Email Address"/>
